@@ -1,4 +1,4 @@
-Apache Servicemix Docker image
+Apache ServiceMix Docker image
 ==============================
 
 Run

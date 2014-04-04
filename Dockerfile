@@ -7,7 +7,7 @@ RUN unzip -d /opt apache-servicemix-5.0.0.zip
 RUN rm apache-servicemix-5.0.0.zip
 RUN ln -s /opt/apache-servicemix-5.0.0 /opt/servicemix
 RUN mkdir /deploy
-RUN rm -rf /opt/servicemix/deploy
+RUN sed -i 's/^\(felix\.fileinstall\.dir\s*=\s*\).*$/\1\/deploy/' /opt/servicemix/etc/org.apache.felix.fileinstall-deploy.cfg
 
 VOLUME ["/deploy"]
 EXPOSE 1099 8101 8181 61616 36888 44444
