@@ -5,7 +5,7 @@ Run
 ---
 
 ```bash
-docker run -d \
+docker run -d -t \
   --name servicemix \
   -p 1099:1099 \
   -p 8101:8101 \

@@ -11,4 +11,4 @@ RUN rm -rf /opt/servicemix/deploy
 
 VOLUME ["/deploy"]
 EXPOSE 1099 8101 8181 61616 36888 44444
-ENTRYPOINT ["/opt/servicemix/bin/servicemix", "console"]
+ENTRYPOINT ["/opt/servicemix/bin/servicemix"]
