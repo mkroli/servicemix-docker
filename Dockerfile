@@ -2,10 +2,10 @@ FROM dockerfile/java
 MAINTAINER mkroli
 ENV JAVA_HOME /usr/lib/jvm/java-7-oracle
 
-RUN wget http://apache.openmirror.de/servicemix/servicemix-5/5.1.1/apache-servicemix-5.1.1.zip; \
-    unzip -d /opt apache-servicemix-5.1.1.zip; \
-    rm apache-servicemix-5.1.1.zip; \
-    ln -s /opt/apache-servicemix-5.1.1 /opt/servicemix; \
+RUN wget http://apache.openmirror.de/servicemix/servicemix-5/5.1.2/apache-servicemix-5.1.2.zip; \
+    unzip -d /opt apache-servicemix-5.1.2.zip; \
+    rm apache-servicemix-5.1.2.zip; \
+    ln -s /opt/apache-servicemix-5.1.2 /opt/servicemix; \
     mkdir /deploy; \
     sed -i 's/^\(felix\.fileinstall\.dir\s*=\s*\).*$/\1\/deploy/' /opt/servicemix/etc/org.apache.felix.fileinstall-deploy.cfg
 
