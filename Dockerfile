@@ -1,6 +1,6 @@
-FROM dockerfile/java
+FROM java:openjdk-7
 MAINTAINER mkroli
-ENV JAVA_HOME /usr/lib/jvm/java-7-oracle
+ENV JAVA_HOME /usr/lib/jvm/java-7-openjdk-amd64
 
 RUN wget http://apache.openmirror.de/servicemix/servicemix-5/5.1.3/apache-servicemix-5.1.3.zip; \
     unzip -d /opt apache-servicemix-5.1.3.zip; \
