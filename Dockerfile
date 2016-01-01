@@ -7,7 +7,7 @@ ENV SERVICEMIX_VERSION_MINOR=3
 ENV SERVICEMIX_VERSION_PATCH=2
 ENV SERVICEMIX_VERSION=${SERVICEMIX_VERSION_MAJOR}.${SERVICEMIX_VERSION_MINOR}.${SERVICEMIX_VERSION_PATCH}
 
-RUN wget http://apache.openmirror.de/servicemix/servicemix-${SERVICEMIX_VERSION_MAJOR}/${SERVICEMIX_VERSION}/apache-servicemix-${SERVICEMIX_VERSION}.zip; \
+RUN wget http://archive.apache.org/dist/servicemix/servicemix-${SERVICEMIX_VERSION_MAJOR}/${SERVICEMIX_VERSION}/apache-servicemix-${SERVICEMIX_VERSION}.zip; \
     unzip -d /opt apache-servicemix-${SERVICEMIX_VERSION}.zip; \
     rm -f apache-servicemix-${SERVICEMIX_VERSION}.zip; \
     ln -s /opt/apache-servicemix-${SERVICEMIX_VERSION} /opt/servicemix; \
